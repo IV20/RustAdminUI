@@ -19,13 +19,30 @@ public partial class About : Page
         switch (SelectedMenuItem)
         {
             case "CHAT":
+                ResetPanels();
+
+                ChatPlayer_Panel.Visible = true;
                 break;
             case "COMMANDS":
+                ResetPanels();
+                Command_Panel.Visible = true;
                 break;
             case "ITEMS":
+                Page.FindControl("ITEMS").Visible = true;
                 break;
             case "SETTINGS":
+                Page.FindControl("SETTINGS").Visible = true;
                 break;
         }
+    }
+    public void ResetPanels()
+    {
+        ChatPlayer_Panel.Visible = false;
+        Command_Panel.Visible = false;
+    }
+
+    public void LoadPlayersToDropDown(ListBox listBox)
+    {
+        RconSharp.Extensions.
     }
 }
