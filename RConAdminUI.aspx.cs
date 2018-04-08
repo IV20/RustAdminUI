@@ -43,6 +43,6 @@ public partial class About : Page
 
     public void LoadPlayersToDropDown(ListBox listBox)
     {
-        RconSharp.Extensions.
+
     }
 }
